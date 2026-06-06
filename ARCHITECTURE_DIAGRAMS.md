@@ -150,9 +150,9 @@ sequenceDiagram
 sequenceDiagram
     participant "App" as App
     participant "Coordination" as Coord
-    participant "Capability<br/>Registry" as CapReg
-    participant "Peer<br/>Registry" as PeerReg
-    participant "Remote<br/>Peer" as RemotePeer
+    participant "CapabilityRegistry" as CapReg
+    participant "PeerRegistry" as PeerReg
+    participant "RemotePeer" as RemotePeer
 
     Note over App,RemotePeer: Task Initiation
     App->>Coord: delegateTask(intent)
@@ -262,10 +262,10 @@ graph TD
 ```mermaid
 sequenceDiagram
     participant "Peer A" as A
-    participant "Context<br/>Manager" as CtxMgr
+    participant "ContextManager" as CtxMgr
     participant "Transport" as T
     participant "Peer B" as B
-    participant "Local State B" as StateB
+    participant "LocalStateB" as StateB
 
     Note over A,B: Initial State
     A->>A: State S = {location: (10,20),<br/>battery: 85%, status: idle}
